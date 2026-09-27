@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Move Better | Coach Sanjay Goud</title>
+    <title>Move Better | Purpose-Driven Lifestyle Coaching</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Razorpay Standard Checkout SDK -->
@@ -73,16 +73,16 @@
             <!-- Desktop Nav -->
             <nav class="hidden md:flex items-center gap-8 text-sm font-medium uppercase tracking-widest text-neutral-400">
                 <a href="#about" class="hover:text-white transition-colors">About</a>
-                <a href="#focus" class="hover:text-white transition-colors">Focus Areas</a>
-                <a href="#protocol" class="hover:text-white transition-colors">Protocol</a>
+                <a href="#transformations" class="hover:text-white transition-colors">Transformations</a>
+                <a href="#focus" class="hover:text-white transition-colors">Specializations</a>
+                <a href="#programs" class="hover:text-white transition-colors">Programs</a>
                 <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
-                <a href="#terms" class="hover:text-white transition-colors">Terms</a>
             </nav>
 
             <div class="hidden md:flex items-center gap-4">
-                <button onclick="openCheckoutModal()" class="px-6 py-2.5 bg-white text-black font-semibold text-sm uppercase tracking-wider hover:bg-neutral-200 transition-all transform active:scale-95">
-                    Join — ₹999
-                </button>
+                <a href="#programs" class="px-6 py-2.5 bg-white text-black font-semibold text-sm uppercase tracking-wider hover:bg-neutral-200 transition-all transform active:scale-95">
+                    Join Now
+                </a>
             </div>
 
             <!-- Mobile Menu Toggle -->
@@ -94,18 +94,18 @@
         <!-- Mobile Drawer -->
         <div id="mobileMenu" class="hidden md:hidden bg-black border-b border-neutral-800 px-6 py-6 flex flex-col gap-4 text-sm font-medium uppercase tracking-widest text-neutral-400">
             <a href="#about" onclick="toggleMobileMenu()" class="hover:text-white">About</a>
-            <a href="#focus" onclick="toggleMobileMenu()" class="hover:text-white">Focus Areas</a>
-            <a href="#protocol" onclick="toggleMobileMenu()" class="hover:text-white">Protocol</a>
+            <a href="#transformations" onclick="toggleMobileMenu()" class="hover:text-white">Transformations</a>
+            <a href="#focus" onclick="toggleMobileMenu()" class="hover:text-white">Specializations</a>
+            <a href="#programs" onclick="toggleMobileMenu()" class="hover:text-white">Programs</a>
             <a href="#faq" onclick="toggleMobileMenu()" class="hover:text-white">FAQ</a>
-            <a href="#terms" onclick="toggleMobileMenu()" class="hover:text-white">Terms</a>
-            <button onclick="toggleMobileMenu(); openCheckoutModal();" class="mt-2 w-full py-3 bg-white text-black font-bold uppercase tracking-wider text-center">
-                Join Consultation — ₹999
-            </button>
+            <a href="#programs" onclick="toggleMobileMenu()" class="mt-2 w-full py-3 bg-white text-black font-bold uppercase tracking-wider text-center block">
+                Join Now
+            </a>
         </div>
     </header>
 
     <!-- HERO SECTION -->
-    <section class="min-h-[85vh] flex items-center justify-center relative px-6 py-20 border-b border-neutral-900">
+    <section class="min-h-[80vh] flex items-center justify-center relative px-6 py-20 border-b border-neutral-900">
         <div class="max-w-4xl mx-auto text-center space-y-8">
             <div class="inline-flex items-center gap-2 px-3 py-1 border border-neutral-800 bg-neutral-950 rounded-full text-xs uppercase tracking-widest text-neutral-400">
                 <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
@@ -113,139 +113,161 @@
             </div>
             
             <h1 class="font-heading text-5xl md:text-7xl font-bold uppercase tracking-tight leading-none text-white">
-                Coaching that fits into your <span class="underline decoration-neutral-700 underline-offset-8">busy life.</span>
+                Delivering simple, sustainable <span class="underline decoration-neutral-700 underline-offset-8">lifestyle transformations.</span>
             </h1>
 
             <p class="text-neutral-400 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
-                Coach Sanjay Goud — ISSA Certified Coach. Delivering simple, sustainable lifestyle transformations, training, and condition management for purpose-driven goals.
+                Coaching tailored for busy individuals, training, and condition management with long-term results.
             </p>
 
             <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
-                <button onclick="openCheckoutModal()" class="w-full sm:w-auto px-8 py-4 bg-white text-black font-heading text-lg font-bold uppercase tracking-wider hover:bg-neutral-200 transition-all shadow-lg hover:shadow-white/10">
-                    Book Consultation — ₹999
-                </button>
-                <a href="#about" class="w-full sm:w-auto px-8 py-4 border border-neutral-800 text-neutral-300 font-heading text-lg font-bold uppercase tracking-wider hover:bg-neutral-900 transition-all text-center">
-                    Learn More
+                <a href="#programs" class="w-full sm:w-auto px-8 py-4 bg-white text-black font-heading text-lg font-bold uppercase tracking-wider hover:bg-neutral-200 transition-all shadow-lg hover:shadow-white/10">
+                    Join Now
+                </a>
+                <a href="#transformations" class="w-full sm:w-auto px-8 py-4 border border-neutral-800 text-neutral-300 font-heading text-lg font-bold uppercase tracking-wider hover:bg-neutral-900 transition-all text-center">
+                    View Transformations
                 </a>
             </div>
-
-            <p class="text-xs text-neutral-500 uppercase tracking-widest">
-                * ₹999 consultation fee is 100% adjusted if you enroll in any coaching program.
-            </p>
         </div>
     </section>
 
-    <!-- ABOUT SECTION -->
-    <section id="about" class="py-24 border-b border-neutral-900 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-            <div class="relative group">
-                <div class="aspect-square w-full max-w-md mx-auto bg-neutral-900 border border-neutral-800 relative overflow-hidden flex items-center justify-center">
-                    <img src="image.png" onerror="this.onerror=null; this.src='https://placehold.co/600x600/121212/FFFFFF?text=Coach+Sanjay+Goud';" alt="Coach Sanjay Goud" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                </div>
+    <!-- TRANSFORMATIONS SECTION -->
+    <section id="transformations" class="py-24 border-b border-neutral-900 px-6">
+        <div class="max-w-7xl mx-auto space-y-12">
+            <div class="text-center space-y-4">
+                <span class="text-xs uppercase tracking-widest text-neutral-500 font-mono">01 / Real Results</span>
+                <h2 class="font-heading text-4xl md:text-5xl font-bold uppercase">Client Transformations</h2>
+                <p class="text-neutral-400 text-sm max-w-lg mx-auto">Real people, real science, and sustainable lifestyle changes.</p>
             </div>
 
-            <div class="space-y-6">
-                <span class="text-xs uppercase tracking-widest text-neutral-500 font-mono">01 / About The Coach</span>
-                <h2 class="font-heading text-4xl md:text-5xl font-bold uppercase tracking-wide">
-                    Simple & Sustainable Transformation
-                </h2>
-                <p class="text-neutral-400 leading-relaxed font-light">
-                    I am an ISSA Certified fitness coach with well-equipped knowledge in training and nutrition. My primary focus is on wellness-based lifestyle changes that are simple and sustainable to help transform busy individuals, including those managing conditions like Hypertension, Type II Diabetes, PCOD, and NAFLD.
-                </p>
-                
-                <div class="grid grid-cols-2 gap-6 pt-6 border-t border-neutral-900">
-                    <div>
-                        <h4 class="font-heading text-xl font-bold uppercase text-white">Busy Lives</h4>
-                        <p class="text-xs text-neutral-500 mt-1">Practical protocols designed around non-negotiable work schedules.</p>
+            <div class="grid md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto">
+                <div class="border border-neutral-800 bg-neutral-950 p-4 space-y-3">
+                    <img src="image_7.png" onerror="this.onerror=null; this.src='https://placehold.co/600x600/121212/FFFFFF?text=Transformation+1';" alt="Client Transformation 1" class="w-full h-auto object-cover border border-neutral-800">
+                    <div class="pt-2 border-t border-neutral-900 text-center">
+                        <span class="font-heading text-xl font-bold uppercase text-white tracking-wider">12 Weeks</span>
                     </div>
-                    <div>
-                        <h4 class="font-heading text-xl font-bold uppercase text-white">Sustainability</h4>
-                        <p class="text-xs text-neutral-500 mt-1">Focusing on lifelong habits, non-restrictive diets, and true progression.</p>
+                </div>
+
+                <div class="border border-neutral-800 bg-neutral-950 p-4 space-y-3">
+                    <img src="image_8.png" onerror="this.onerror=null; this.src='https://placehold.co/600x600/121212/FFFFFF?text=Transformation+2';" alt="Client Transformation 2" class="w-full h-auto object-cover border border-neutral-800">
+                    <div class="pt-2 border-t border-neutral-900 text-center">
+                        <span class="font-heading text-xl font-bold uppercase text-white tracking-wider">12 Weeks</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FOCUS AREAS / CONDITIONS -->
+    <!-- SPECIALIZATIONS SECTION -->
     <section id="focus" class="py-24 border-b border-neutral-900 px-6 bg-neutral-950">
         <div class="max-w-7xl mx-auto space-y-12">
             <div class="text-center space-y-4">
-                <span class="text-xs uppercase tracking-widest text-neutral-500 font-mono">02 / Specializations</span>
-                <h2 class="font-heading text-4xl md:text-5xl font-bold uppercase">Focus Areas</h2>
-                <p class="text-neutral-400 text-sm max-w-lg mx-auto">Click any card to read our specialized coaching protocol for that specific condition.</p>
+                <span class="text-xs uppercase tracking-widest text-neutral-500 font-mono">02 / Focus Areas</span>
+                <h2 class="font-heading text-4xl md:text-5xl font-bold uppercase">Condition & Lifestyle Specializations</h2>
             </div>
 
             <div class="grid md:grid-cols-3 gap-6">
-                <div onclick="openDefModal('Lifestyle Transformation', 'Comprehensive lifestyle, activity, and dietary optimization built for professionals with tight schedules and high stress levels.')" class="p-8 border border-neutral-800 bg-black hover:border-white transition-all cursor-pointer group">
-                    <span class="text-xs font-mono text-neutral-600 group-hover:text-white transition-colors">01</span>
+                <div class="p-8 border border-neutral-800 bg-black">
+                    <span class="text-xs font-mono text-neutral-600">01</span>
                     <h3 class="font-heading text-2xl font-bold uppercase mt-4 mb-2">Lifestyle Transformation</h3>
-                    <p class="text-neutral-400 text-sm font-light">Sustainable fat loss, muscle gain, and energy level management.</p>
+                    <p class="text-neutral-400 text-sm font-light">Sustainable fat loss, muscle gain, and overall energy level optimization.</p>
                 </div>
 
-                <div onclick="openDefModal('Hypertension Care', 'Structured low-impact cardiovascular routines and sodium-conscious dietary planning designed to support blood pressure management.')" class="p-8 border border-neutral-800 bg-black hover:border-white transition-all cursor-pointer group">
-                    <span class="text-xs font-mono text-neutral-600 group-hover:text-white transition-colors">02</span>
-                    <h3 class="font-heading text-2xl font-bold uppercase mt-4 mb-2">Hypertension</h3>
-                    <p class="text-neutral-400 text-sm font-light">Custom exercise routines tailored for healthy blood pressure control.</p>
+                <div class="p-8 border border-neutral-800 bg-black">
+                    <span class="text-xs font-mono text-neutral-600">02</span>
+                    <h3 class="font-heading text-2xl font-bold uppercase mt-4 mb-2">Hypertension Care</h3>
+                    <p class="text-neutral-400 text-sm font-light">Custom low-impact cardiovascular routines and sodium-conscious nutrition.</p>
                 </div>
 
-                <div onclick="openDefModal('Type II Diabetes', 'Insulin-sensitivity focused training paired with sustainable carbohydrate management strategies.')" class="p-8 border border-neutral-800 bg-black hover:border-white transition-all cursor-pointer group">
-                    <span class="text-xs font-mono text-neutral-600 group-hover:text-white transition-colors">03</span>
+                <div class="p-8 border border-neutral-800 bg-black">
+                    <span class="text-xs font-mono text-neutral-600">03</span>
                     <h3 class="font-heading text-2xl font-bold uppercase mt-4 mb-2">Type II Diabetes</h3>
-                    <p class="text-neutral-400 text-sm font-light">Targeted physical conditioning and glycemic response nutrition.</p>
+                    <p class="text-neutral-400 text-sm font-light">Targeted physical conditioning and glycemic-friendly dietary guidance.</p>
                 </div>
 
-                <div onclick="openDefModal('PCOD / PCOS Care', 'Hormone-supportive resistance protocols and inflammation-lowering nutrition strategies.')" class="p-8 border border-neutral-800 bg-black hover:border-white transition-all cursor-pointer group">
-                    <span class="text-xs font-mono text-neutral-600 group-hover:text-white transition-colors">04</span>
+                <div class="p-8 border border-neutral-800 bg-black">
+                    <span class="text-xs font-mono text-neutral-600">04</span>
                     <h3 class="font-heading text-2xl font-bold uppercase mt-4 mb-2">PCOD / PCOS Care</h3>
-                    <p class="text-neutral-400 text-sm font-light">Hormone-friendly resistance training & metabolic optimization.</p>
+                    <p class="text-neutral-400 text-sm font-light">Hormone-supportive resistance protocols and inflammation reduction.</p>
                 </div>
 
-                <div onclick="openDefModal('NAFLD Care', 'Caloric regulation and targeted strength work to support liver fat clearance and overall metabolic balance.')" class="p-8 border border-neutral-800 bg-black hover:border-white transition-all cursor-pointer group">
-                    <span class="text-xs font-mono text-neutral-600 group-hover:text-white transition-colors">05</span>
+                <div class="p-8 border border-neutral-800 bg-black">
+                    <span class="text-xs font-mono text-neutral-600">05</span>
                     <h3 class="font-heading text-2xl font-bold uppercase mt-4 mb-2">NAFLD Care</h3>
-                    <p class="text-neutral-400 text-sm font-light">Non-Alcoholic Fatty Liver Disease reversal support through routine.</p>
+                    <p class="text-neutral-400 text-sm font-light">Non-Alcoholic Fatty Liver Disease support through activity & routine.</p>
                 </div>
 
-                <div onclick="openCheckoutModal()" class="p-8 border border-white bg-white text-black hover:bg-neutral-200 transition-all cursor-pointer flex flex-col justify-between">
-                    <div>
-                        <span class="text-xs font-mono text-neutral-600">GET STARTED</span>
-                        <h3 class="font-heading text-2xl font-bold uppercase mt-4 mb-2">Book 1-on-1 Consultation</h3>
-                        <p class="text-neutral-700 text-sm">Direct consultation call with Coach Sanjay Goud.</p>
-                    </div>
-                    <span class="font-heading text-xl font-bold mt-6">₹999 (Adjusted on Enrollment) &rarr;</span>
+                <div class="p-8 border border-neutral-800 bg-black">
+                    <span class="text-xs font-mono text-neutral-600">06</span>
+                    <h3 class="font-heading text-2xl font-bold uppercase mt-4 mb-2">Busy Professionals</h3>
+                    <p class="text-neutral-400 text-sm font-light">Time-efficient workout structures built strictly around packed work days.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PROTOCOL SECTION -->
-    <section id="protocol" class="py-24 border-b border-neutral-900 px-6">
+    <!-- PROGRAMS & CONSULTATION SECTION -->
+    <section id="programs" class="py-24 border-b border-neutral-900 px-6">
         <div class="max-w-7xl mx-auto space-y-16">
-            <div class="space-y-4">
-                <span class="text-xs uppercase tracking-widest text-neutral-500 font-mono">03 / Method</span>
-                <h2 class="font-heading text-4xl md:text-5xl font-bold uppercase">3-Step Transformation Protocol</h2>
+            <div class="text-center space-y-4">
+                <span class="text-xs uppercase tracking-widest text-neutral-500 font-mono">03 / Offerings</span>
+                <h2 class="font-heading text-4xl md:text-5xl font-bold uppercase">Programs & Consultation</h2>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="space-y-4 border-l border-neutral-800 pl-6">
-                    <span class="font-heading text-3xl font-bold text-neutral-600">01</span>
-                    <h3 class="font-heading text-2xl font-bold uppercase">Consultation Call</h3>
-                    <p class="text-neutral-400 text-sm leading-relaxed font-light">Direct 1-on-1 evaluation of your daily routine, schedule constraints, diet history, and specific medical background.</p>
+            <!-- Full Coaching Program -->
+            <div class="border border-neutral-800 bg-neutral-950 p-8 md:p-12 grid md:grid-cols-12 gap-8 items-center">
+                <div class="md:col-span-5 space-y-4">
+                    <span class="text-xs font-mono uppercase text-emerald-400">Complete Transformation</span>
+                    <h3 class="font-heading text-5xl font-bold tracking-tight">15999 INR <span class="text-lg text-neutral-500 font-sans font-normal">/ monthly</span></h3>
+                    <button onclick="openCheckoutModal('1-on-1 Coaching Program', 15999)" class="w-full py-4 bg-white text-black font-heading font-bold text-lg uppercase tracking-wider hover:bg-neutral-200 transition-colors">
+                        BUY NOW
+                    </button>
                 </div>
 
-                <div class="space-y-4 border-l border-neutral-800 pl-6">
-                    <span class="font-heading text-3xl font-bold text-neutral-600">02</span>
-                    <h3 class="font-heading text-2xl font-bold uppercase">Custom Blueprint</h3>
-                    <p class="text-neutral-400 text-sm leading-relaxed font-light">Engineered workout split and nutrition plan that fits around your job, travel schedule, and meal preferences.</p>
-                </div>
+                <div class="md:col-span-7 space-y-4 border-t md:border-t-0 md:border-l border-neutral-800 pt-6 md:pt-0 md:pl-8">
+                    <h4 class="font-heading text-3xl font-bold uppercase text-white">1-ON-1 COACHING PROGRAM</h4>
+                    <p class="font-heading text-lg font-bold text-neutral-300 uppercase">BEST PROGRAM EVER!</p>
+                    
+                    <ul class="space-y-2 text-sm text-neutral-300 font-mono uppercase">
+                        <li class="flex items-center gap-2"><span class="text-white">✓</span> 1 ON 1 SUPPORT / CONSULTATION</li>
+                        <li class="flex items-center gap-2"><span class="text-white">✓</span> 24×7 AVAILABILITY THROUGH CALL / TEXT</li>
+                        <li class="flex items-center gap-2"><span class="text-white">✓</span> CUSTOM WORKOUT & NUTRITION PROTOCOL</li>
+                        <li class="flex items-center gap-2"><span class="text-white">✓</span> WEEKLY CHECK-INS & BIOFEEDBACK TRACKING</li>
+                    </ul>
 
-                <div class="space-y-4 border-l border-neutral-800 pl-6">
-                    <span class="font-heading text-3xl font-bold text-neutral-600">03</span>
-                    <h3 class="font-heading text-2xl font-bold uppercase">Execution & Tracking</h3>
-                    <p class="text-neutral-400 text-sm leading-relaxed font-light">Weekly check-ins, biofeedback monitoring, and protocol adjustments to guarantee consistent progress.</p>
+                    <p class="text-xs font-heading tracking-widest uppercase text-neutral-500 pt-2">PEAK HUMAN PERFORMANCE.</p>
                 </div>
             </div>
+
+            <!-- Consultation Block -->
+            <div class="border border-neutral-800 bg-black p-8 md:p-12 grid md:grid-cols-12 gap-8 items-center">
+                <div class="md:col-span-7 space-y-6">
+                    <h4 class="font-heading text-4xl md:text-5xl font-bold uppercase text-white">CONSULTATION</h4>
+                    <p class="text-xs font-mono uppercase text-neutral-400 border-l-2 border-white pl-3">
+                        NOTE: CONSULTATION FEE WILL BE ADJUSTED IF YOU OPT FOR OUR FULL COACHING PROGRAM.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        <h5 class="font-heading text-2xl font-bold uppercase text-white">WHAT YOU GET</h5>
+                        <p class="text-sm text-neutral-300 font-light leading-relaxed">
+                            AN IN-DEPTH ASSESSMENT OF YOUR CURRENT FITNESS LEVEL AND CREATION OF A ROADMAP TO TAKE YOU TO YOUR FITNESS GOALS.
+                        </p>
+                        <p class="text-sm text-neutral-300 font-light leading-relaxed">
+                            GET ALL YOUR QUESTIONS ANSWERED ON TOPICS OF FAT LOSS, MUSCLE GAIN, IMPROVING SPORTS PERFORMANCE, AND GENERAL HEALTH AND WELLNESS.
+                        </p>
+                    </div>
+
+                    <button onclick="openCheckoutModal('30-Min Consultation Call', 4999)" class="px-8 py-4 border border-white text-white font-heading font-bold text-lg uppercase tracking-wider hover:bg-white hover:text-black transition-colors">
+                        BOOK A MEETING
+                    </button>
+                </div>
+
+                <div class="md:col-span-5 text-left md:text-right space-y-2 border-t md:border-t-0 md:border-l border-neutral-800 pt-6 md:pt-0 md:pl-8">
+                    <h3 class="font-heading text-5xl md:text-6xl font-bold">4999 INR</h3>
+                    <p class="text-xs font-mono uppercase text-neutral-400">30 MIN CONSULTATION CALL.</p>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -259,33 +281,14 @@
 
             <div class="space-y-6">
                 <div class="p-6 border border-neutral-800 bg-black space-y-2">
-                    <h3 class="font-heading text-xl font-bold uppercase text-white">How does the ₹999 consultation fee adjustment work?</h3>
-                    <p class="text-neutral-400 text-sm font-light">When you pay ₹999 for the 1-on-1 consultation call, this entire amount is credited back and deducted from your fee if you decide to enroll in any 1-on-1 transformation program.</p>
+                    <h3 class="font-heading text-xl font-bold uppercase text-white">How does the consultation fee adjustment work?</h3>
+                    <p class="text-neutral-400 text-sm font-light">When you pay for the 1-on-1 consultation call, that amount is credited back and deducted if you choose to enroll in the full transformation program.</p>
                 </div>
 
                 <div class="p-6 border border-neutral-800 bg-black space-y-2">
                     <h3 class="font-heading text-xl font-bold uppercase text-white">Can I train if I have Diabetes, PCOD, or Hypertension?</h3>
-                    <p class="text-neutral-400 text-sm font-light">Yes. Coach Sanjay Goud specializes in fitness guidance tailored for health conditions. Protocols are crafted carefully around medical history and physician guidelines.</p>
+                    <p class="text-neutral-400 text-sm font-light">Yes. Protocols are custom-tailored carefully around health history, medical restrictions, and physician guidelines.</p>
                 </div>
-
-                <div class="p-6 border border-neutral-800 bg-black space-y-2">
-                    <h3 class="font-heading text-xl font-bold uppercase text-white">Do I need access to a full commercial gym?</h3>
-                    <p class="text-neutral-400 text-sm font-light">No. Plans are customized based on what you have available—whether full gym, home dumbbells, resistance bands, or bodyweight equipment.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TERMS SECTION -->
-    <section id="terms" class="py-24 border-b border-neutral-900 px-6">
-        <div class="max-w-4xl mx-auto space-y-8">
-            <span class="text-xs uppercase tracking-widest text-neutral-500 font-mono">05 / Guidelines</span>
-            <h2 class="font-heading text-3xl font-bold uppercase">Terms & Conditions</h2>
-
-            <div class="space-y-6 text-xs text-neutral-400 leading-relaxed font-light">
-                <p><strong class="text-white uppercase font-mono">01. Disclaimer:</strong> Move Better fitness coaching provides physical conditioning and nutrition guidance. Clients managing medical conditions (Hypertension, Type II Diabetes, PCOD, NAFLD) should consult their physician prior to starting.</p>
-                <p><strong class="text-white uppercase font-mono">02. Strict No-Refund Policy:</strong> All consultation fees (₹999) and program payments are strictly non-refundable under any circumstances once booked or delivered.</p>
-                <p><strong class="text-white uppercase font-mono">03. Governing Law:</strong> All terms, conditions, and agreements are governed and enforced in strict compliance with applicable laws.</p>
             </div>
         </div>
     </section>
@@ -300,7 +303,7 @@
         <p>© 2026 Move Better. All rights reserved.</p>
     </footer>
 
-    <!-- CHECKOUT MODAL WITH RAZORPAY & CALENDAR LINK -->
+    <!-- CHECKOUT MODAL WITH GOOGLE SHEETS & CALENDAR LOGIC -->
     <div id="checkoutModal" class="fixed inset-0 z-50 hidden modal-blur bg-black/80 flex items-center justify-center p-4">
         <div class="bg-black border border-neutral-800 w-full max-w-4xl rounded-none shadow-2xl overflow-hidden grid md:grid-cols-12 max-h-[90vh] overflow-y-auto">
             
@@ -312,8 +315,8 @@
                 </div>
 
                 <div class="space-y-4">
-                    <h4 class="font-heading text-lg font-bold uppercase text-white">Client Information</h4>
-                    <p class="text-xs text-neutral-400">Fill in your details to proceed to payment and calendar scheduling.</p>
+                    <h4 class="font-heading text-lg font-bold uppercase text-white">Client Details</h4>
+                    <p class="text-xs text-neutral-400">Fill in your information to reserve your spot and proceed to scheduling.</p>
 
                     <div>
                         <label class="block text-xs uppercase font-mono text-neutral-400 mb-1">Full Name</label>
@@ -330,8 +333,8 @@
                         <input type="tel" id="clientPhone" placeholder="+91 9876543210" class="w-full bg-neutral-900 border border-neutral-700 px-4 py-3 text-sm text-white focus:outline-none focus:border-white">
                     </div>
 
-                    <button onclick="payWithRazorpay()" class="w-full py-4 bg-emerald-500 text-black font-heading font-bold text-lg uppercase tracking-wider hover:bg-emerald-400 transition-colors mt-4">
-                        Pay ₹999 & Schedule Call &rarr;
+                    <button id="submitBtn" onclick="handleCheckout()" class="w-full py-4 bg-emerald-500 text-black font-heading font-bold text-lg uppercase tracking-wider hover:bg-emerald-400 transition-colors mt-4">
+                        Submit & Schedule Call &rarr;
                     </button>
                 </div>
             </div>
@@ -339,80 +342,68 @@
             <!-- Order Summary -->
             <div class="md:col-span-5 bg-neutral-950 p-6 md:p-8 border-t md:border-t-0 md:border-l border-neutral-800 flex flex-col justify-between">
                 <div class="space-y-6">
-                    <h4 class="font-heading text-lg font-bold uppercase tracking-wider text-white border-b border-neutral-800 pb-3">Order Summary</h4>
+                    <h4 class="font-heading text-lg font-bold uppercase tracking-wider text-white border-b border-neutral-800 pb-3">Selected Program</h4>
                     
                     <div class="flex items-center gap-4">
                         <div class="w-12 h-12 bg-neutral-900 border border-neutral-700 flex items-center justify-center font-heading font-bold text-sm">
                             MB
                         </div>
                         <div class="flex-1">
-                            <h5 class="text-sm font-bold uppercase">1-on-1 Consultation</h5>
-                            <p class="text-xs text-neutral-500">Coach Sanjay Goud</p>
+                            <h5 id="modalProgramTitle" class="text-sm font-bold uppercase">Program</h5>
+                            <p class="text-xs text-neutral-500">Move Better</p>
                         </div>
-                        <span class="font-mono text-sm font-bold">₹999.00</span>
-                    </div>
-
-                    <div class="p-3 bg-neutral-900 border border-neutral-800 text-xs text-neutral-400 space-y-1">
-                        <p class="text-white font-semibold uppercase">✓ 100% Fee Adjustment</p>
-                        <p>This ₹999 consultation fee will be deducted if you join any full coaching program.</p>
+                        <span id="modalProgramPrice" class="font-mono text-sm font-bold">₹0</span>
                     </div>
 
                     <div class="space-y-2 text-xs font-mono border-t border-neutral-800 pt-4">
                         <div class="flex justify-between text-neutral-400">
-                            <span>Consultation Call</span>
-                            <span>₹999.00</span>
+                            <span>Subtotal</span>
+                            <span id="modalSubtotal">₹0</span>
                         </div>
                         <div class="flex justify-between text-white font-bold text-sm pt-2 border-t border-neutral-800">
-                            <span>Total Amount</span>
-                            <span>₹999.00</span>
+                            <span>Total</span>
+                            <span id="modalTotal">₹0</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="mt-8 text-center text-neutral-500 text-xs font-mono flex items-center justify-center gap-1">
                     <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
-                    RAZORPAY SECURE PAYMENT
+                    SECURE SUBMISSION
                 </div>
             </div>
 
         </div>
     </div>
 
-    <!-- DEFINITION MODAL -->
-    <div id="defModal" class="fixed inset-0 z-50 hidden modal-blur bg-black/80 flex items-center justify-center p-4">
-        <div class="bg-black border border-neutral-800 p-8 max-w-lg w-full space-y-4">
-            <div class="flex justify-between items-center border-b border-neutral-800 pb-4">
-                <h3 id="defTitle" class="font-heading text-2xl font-bold uppercase text-white"></h3>
-                <button onclick="closeDefModal()" class="text-neutral-500 hover:text-white text-xl">&times;</button>
-            </div>
-            <p id="defText" class="text-neutral-400 text-sm leading-relaxed font-light"></p>
-            <button onclick="closeDefModal(); openCheckoutModal();" class="w-full py-3 bg-white text-black font-heading font-bold uppercase tracking-wider text-sm hover:bg-neutral-200 mt-4">
-                Book Consultation — ₹999
-            </button>
-        </div>
-    </div>
-
-    <!-- SCRIPT LOGIC FOR RAZORPAY & CALENDAR -->
+    <!-- SCRIPT LOGIC FOR SHEETS & CALENDAR -->
     <script>
-        // ATTACHED RAZORPAY KEY ID AND GOOGLE CALENDAR LINK
+        // CONFIGURATION
         const RAZORPAY_KEY_ID = 'rzp_live_TeMqnJ0AqRKTTp';
         const GOOGLE_CALENDAR_URL = 'https://calendar.app.google/5WynNWHkVqEoFjEs6';
+        
+        // GOOGLE APPS SCRIPT WEB APP URL INTEGRATED BELOW:
+        const GOOGLE_SHEETS_SCRIPT_URL = 'https://script.google.com/macros/s/19F6-tDeCHlulhmXUqOiksXm34X5FBlW4YzOZ2s2I-sk/exec';
+
+        // SET TO TRUE TO BYPASS RAZORPAY PAYMENT FOR IMMEDIATE TESTING
+        const BYPASS_RAZORPAY = true;
+
+        let selectedProgram = '';
+        let selectedAmount = 0;
 
         function toggleMobileMenu() {
             document.getElementById('mobileMenu').classList.toggle('hidden');
         }
 
-        function openDefModal(title, text) {
-            document.getElementById('defTitle').innerText = title;
-            document.getElementById('defText').innerText = text;
-            document.getElementById('defModal').classList.remove('hidden');
-        }
-
-        function closeDefModal() {
-            document.getElementById('defModal').classList.add('hidden');
-        }
-
-        function openCheckoutModal() {
+        function openCheckoutModal(programName, price) {
+            selectedProgram = programName;
+            selectedAmount = price;
+            
+            document.getElementById('modalProgramTitle').innerText = programName;
+            document.getElementById('modalProgramPrice').innerText = '₹' + price;
+            document.getElementById('modalSubtotal').innerText = '₹' + price;
+            document.getElementById('modalTotal').innerText = '₹' + price;
+            
             document.getElementById('checkoutModal').classList.remove('hidden');
         }
 
@@ -420,26 +411,67 @@
             document.getElementById('checkoutModal').classList.add('hidden');
         }
 
-        function payWithRazorpay() {
-            const name = document.getElementById('clientName').value;
-            const email = document.getElementById('clientEmail').value;
-            const phone = document.getElementById('clientPhone').value;
-
-            if(!name || !email || !phone) {
-                alert("Please fill in your Name, Email, and WhatsApp number.");
+        // SAVE CLIENT DATA TO GOOGLE SHEET
+        async function logToGoogleSheets(data) {
+            if (!GOOGLE_SHEETS_SCRIPT_URL || GOOGLE_SHEETS_SCRIPT_URL.includes('YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL')) {
+                console.warn('Google Sheets script URL is not configured yet.');
                 return;
             }
 
+            try {
+                await fetch(GOOGLE_SHEETS_SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+            } catch (err) {
+                console.error('Error logging to Google Sheets:', err);
+            }
+        }
+
+        // HANDLE SUBMISSION FLOW
+        async function handleCheckout() {
+            const name = document.getElementById('clientName').value.trim();
+            const email = document.getElementById('clientEmail').value.trim();
+            const phone = document.getElementById('clientPhone').value.trim();
+
+            if (!name || !email || !phone) {
+                alert("Please complete your Name, Email, and WhatsApp phone number.");
+                return;
+            }
+
+            const btn = document.getElementById('submitBtn');
+            btn.disabled = true;
+            btn.innerText = "Processing...";
+
+            const payload = {
+                timestamp: new Date().toLocaleString(),
+                name: name,
+                email: email,
+                phone: phone,
+                program: selectedProgram,
+                amount: '₹' + selectedAmount
+            };
+
+            // BYPASS MODE (FOR TESTING)
+            if (BYPASS_RAZORPAY) {
+                await logToGoogleSheets(payload);
+                alert("Test details successfully logged to Google Sheet! Redirecting to Google Calendar...");
+                window.location.href = GOOGLE_CALENDAR_URL;
+                return;
+            }
+
+            // LIVE RAZORPAY PAYMENT MODE
             var options = {
                 "key": RAZORPAY_KEY_ID, 
-                "amount": "99900", // Amount in paise = ₹999
+                "amount": (selectedAmount * 100).toString(),
                 "currency": "INR",
                 "name": "Move Better Coaching",
-                "description": "1-on-1 Consultation Call (Coach Sanjay Goud)",
-                "image": "image.png",
-                "handler": function (response){
-                    alert("Payment Successful! Payment ID: " + response.razorpay_payment_id + "\n\nRedirecting to schedule your call on Google Calendar now...");
-                    // Redirects client straight to your Google Calendar schedule link
+                "description": selectedProgram,
+                "handler": async function (response) {
+                    payload.paymentId = response.razorpay_payment_id;
+                    await logToGoogleSheets(payload);
                     window.location.href = GOOGLE_CALENDAR_URL;
                 },
                 "prefill": {
@@ -447,16 +479,16 @@
                     "email": email,
                     "contact": phone
                 },
-                "theme": {
-                    "color": "#000000"
-                }
+                "theme": { "color": "#000000" }
             };
 
-            var rzp1 = new Razorpay(options);
-            rzp1.on('payment.failed', function (response){
+            var rzp = new Razorpay(options);
+            rzp.on('payment.failed', function (response) {
                 alert("Payment Failed: " + response.error.description);
+                btn.disabled = false;
+                btn.innerText = "Submit & Schedule Call →";
             });
-            rzp1.open();
+            rzp.open();
         }
     </script>
 </body>
