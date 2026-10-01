@@ -1,374 +1,243 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>Move Better | Purpose-Driven Lifestyle Coaching</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              black: '#000000',
+              card: '#0a0a0a',
+              border: '#222222',
+              muted: '#888888',
+              light: '#f5f5f5',
+            }
+          }
+        }
+      }
+    }
+  </script>
   <style>
-    :root {
-      --bg-color: #000000;
-      --card-bg: #0a0a0a;
-      --border-color: #222222;
-      --text-main: #ffffff;
-      --text-muted: #888888;
-      --accent: #ffffff;
-      --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
-      background-color: var(--bg-color);
-      color: var(--text-main);
-      font-family: var(--font);
-      line-height: 1.6;
+      background-color: #000000;
+      color: #ffffff;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       -webkit-font-smoothing: antialiased;
+      -webkit-tap-highlight-color: transparent;
     }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    /* --- Navigation --- */
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.85);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border-color);
-      z-index: 100;
-    }
-
-    .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 72px;
-    }
-
-    .logo {
-      font-weight: 900;
-      font-size: 1.25rem;
-      letter-spacing: -0.02em;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .logo-sq {
-      width: 12px;
-      height: 12px;
-      background: #fff;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 32px;
-      align-items: center;
-      list-style: none;
-    }
-
-    .nav-links a {
-      font-size: 0.875rem;
-      font-weight: 500;
-      color: var(--text-muted);
-      transition: color 0.2s;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .nav-links a:hover {
-      color: var(--text-main);
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 12px 24px;
-      font-size: 0.875rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      border-radius: 0px;
-      transition: all 0.2s;
-      cursor: pointer;
-    }
-
-    .btn-primary {
-      background-color: var(--accent);
-      color: #000000;
-      border: 1px solid var(--accent);
-    }
-
-    .btn-primary:hover {
-      background-color: #cccccc;
-      border-color: #cccccc;
-    }
-
-    .btn-secondary {
-      background-color: transparent;
-      color: var(--text-main);
-      border: 1px solid var(--border-color);
-    }
-
-    .btn-secondary:hover {
-      border-color: var(--text-main);
-    }
-
-    /* --- Hero Section --- */
-    .hero {
-      padding: 180px 0 100px;
-      text-align: center;
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .badge {
-      display: inline-block;
-      padding: 6px 16px;
-      border: 1px solid var(--border-color);
-      border-radius: 100px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--text-muted);
-      margin-bottom: 24px;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.5rem, 6vw, 4.5rem);
-      font-weight: 900;
-      line-height: 1.05;
-      letter-spacing: -0.03em;
-      text-transform: uppercase;
-      max-width: 900px;
-      margin: 0 auto 24px;
-    }
-
-    .hero p {
-      font-size: 1.125rem;
-      color: var(--text-muted);
-      max-width: 600px;
-      margin: 0 auto 40px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 16px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    /* --- Sections General --- */
-    section {
-      padding: 100px 0;
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .section-title {
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--text-muted);
-      margin-bottom: 12px;
-    }
-
-    .section-heading {
-      font-size: 2rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      margin-bottom: 48px;
-      text-transform: uppercase;
-    }
-
-    /* --- Specializations Grid --- */
-    .spec-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
-    }
-
-    .spec-card {
-      background-color: var(--card-bg);
-      border: 1px solid var(--border-color);
-      padding: 32px;
-      transition: border-color 0.2s;
-    }
-
-    .spec-card:hover {
-      border-color: #444444;
-    }
-
-    .spec-number {
-      font-size: 0.875rem;
-      font-weight: 700;
-      color: var(--text-muted);
-      margin-bottom: 20px;
-    }
-
-    .spec-card h3 {
-      font-size: 1.25rem;
-      font-weight: 800;
-      letter-spacing: -0.01em;
-      margin-bottom: 12px;
-      text-transform: uppercase;
-    }
-
-    .spec-card p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-
-    /* --- Empty Programs Section --- */
-    .empty-programs-box {
-      border: 1px dashed var(--border-color);
-      padding: 80px 24px;
-      text-align: center;
-      color: var(--text-muted);
-    }
-
-    /* --- Footer --- */
-    footer {
-      padding: 48px 0;
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 0.875rem;
+    
+    /* Smooth touch responsiveness */
+    input, button, a {
+      touch-action: manipulation;
     }
   </style>
 </head>
-<body>
+<body class="bg-black text-white antialiased selection:bg-white selection:text-black">
 
-  <!-- Navigation -->
-  <nav>
-    <div class="container nav-container">
-      <a href="#" class="logo">
-        <div class="logo-sq"></div>
+  <!-- NAVIGATION -->
+  <nav class="fixed top-0 left-0 w-full bg-black/90 backdrop-blur-md border-b border-brand-border z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-18 sm:h-20 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2 text-base sm:text-lg font-extrabold tracking-tight hover:opacity-80 transition-opacity">
+        <span class="w-3 h-3 bg-white inline-block"></span>
         MOVE BETTER
       </a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#transformations">Transformations</a></li>
-        <li><a href="#specializations">Specializations</a></li>
-        <li><a href="#programs">Programs</a></li>
-        <li><a href="#faq">FAQ</a></li>
-      </ul>
-      <a href="#programs" class="btn btn-primary">Book Call</a>
+      
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-widest text-brand-muted">
+        <a href="#about" class="hover:text-white transition-colors py-2">About</a>
+        <a href="#transformations" class="hover:text-white transition-colors py-2">Transformations</a>
+        <a href="#programs" class="hover:text-white transition-colors py-2">Programs</a>
+        <a href="#faq" class="hover:text-white transition-colors py-2">FAQ</a>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <a href="#programs" class="bg-white text-black font-bold text-xs uppercase tracking-wider px-5 py-2.5 sm:px-6 sm:py-3 hover:bg-neutral-200 transition-colors active:scale-95 duration-150">
+          JOIN
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="menu-btn" class="md:hidden text-white p-2 focus:outline-none" aria-label="Toggle Menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Slide-Down Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-black border-b border-brand-border px-6 py-6 transition-all duration-300">
+      <div class="flex flex-col gap-4 text-xs font-semibold uppercase tracking-widest text-brand-muted">
+        <a href="#about" class="mobile-link py-2 hover:text-white transition-colors">About</a>
+        <a href="#transformations" class="mobile-link py-2 hover:text-white transition-colors">Transformations</a>
+        <a href="#programs" class="mobile-link py-2 hover:text-white transition-colors">Programs</a>
+        <a href="#faq" class="mobile-link py-2 hover:text-white transition-colors">FAQ</a>
+      </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <header class="hero">
-    <div class="container">
-      <div class="badge">• Purpose-Driven Lifestyle Coaching</div>
-      <h1>Delivering Simple, Sustainable Lifestyle Transformations.</h1>
-      <p>Coaching tailored for busy individuals, training, and condition management with long-term results.</p>
-      <div class="hero-buttons">
-        <a href="#programs" class="btn btn-primary">Book Consultation Call</a>
-        <a href="#transformations" class="btn btn-secondary">View Transformations</a>
+  <!-- HERO SECTION -->
+  <header class="pt-36 sm:pt-48 pb-20 sm:pb-32 border-b border-brand-border text-center px-4">
+    <div class="max-w-4xl mx-auto">
+      <div class="inline-block border border-brand-border rounded-full px-4 py-1.5 text-[10px] sm:text-xs uppercase tracking-widest text-brand-muted mb-8">
+        • Purpose-Driven Lifestyle Coaching
       </div>
+      <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight leading-tight sm:leading-none max-w-4xl mx-auto">
+        Coaching That Fits Into Your Busy Schedule.
+      </h1>
     </div>
   </header>
 
-  <!-- About Section -->
-  <section id="about">
-    <div class="container">
-      <div class="section-title">Coach Sanjay Goud</div>
-      <h2 class="section-heading">About The Coach</h2>
-      <p style="color: var(--text-muted); max-width: 800px; font-size: 1.1rem; line-height: 1.8;">
-        At Move Better, performance isn't just about intense workouts—it's about structured movement, optimal recovery, and sustainable habits built for longevity.
+  <!-- ABOUT SECTION -->
+  <section id="about" class="py-16 sm:py-24 border-b border-brand-border px-4 sm:px-6">
+    <div class="max-w-4xl mx-auto">
+      <p class="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-brand-muted mb-3">
+        Coach Sanjay Goud
+      </p>
+      
+      <!-- Heading -->
+      <h2 class="text-2xl sm:text-4xl font-extrabold uppercase tracking-tight mb-8">
+        I am Sanjay Goud
+      </h2>
+      
+      <!-- Clean, readable content styling with clear vertical gap -->
+      <p class="text-brand-muted text-base sm:text-xl font-normal leading-relaxed max-w-3xl">
+        I am an ISSA Certified fitness coach with extensive knowledge on training and nutrition. I primarily focus on wellness-based lifestyle changes which are simple and sustainable to transform individuals. I also help people with lifestyle disorders.
       </p>
     </div>
   </section>
 
-  <!-- Transformations Section -->
-  <section id="transformations">
-    <div class="container">
-      <div class="section-title">Results</div>
-      <h2 class="section-heading">Transformations</h2>
-      <p style="color: var(--text-muted);">Client stories and progress showcase coming soon.</p>
+  <!-- TRANSFORMATIONS SECTION -->
+  <section id="transformations" class="py-16 sm:py-24 border-b border-brand-border px-4 sm:px-6">
+    <div class="max-w-6xl mx-auto">
+      <p class="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-brand-muted mb-2">Results</p>
+      <h2 class="text-xl sm:text-3xl font-extrabold uppercase tracking-tight mb-8">Transformations</h2>
+      <p class="text-brand-muted text-sm sm:text-base">Client stories and progress showcase coming soon.</p>
     </div>
   </section>
 
-  <!-- Specializations Section -->
-  <section id="specializations">
-    <div class="container">
-      <div class="section-title">Focus Areas</div>
-      <h2 class="section-heading">Specializations</h2>
+  <!-- PROGRAMS SECTION -->
+  <section id="programs" class="py-16 sm:py-24 border-b border-brand-border px-4 sm:px-6">
+    <div class="max-w-6xl mx-auto">
+      <p class="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-brand-muted mb-2">Coaching</p>
+      <h2 class="text-xl sm:text-3xl font-extrabold uppercase tracking-tight mb-8">Programs</h2>
+      <div class="border border-dashed border-brand-border p-12 sm:p-20 text-center text-brand-muted rounded-none">
+        <p class="text-xs sm:text-sm uppercase tracking-widest font-medium">Programs & Coaching Packages Coming Soon.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section id="faq" class="py-16 sm:py-24 border-b border-brand-border px-4 sm:px-6">
+    <div class="max-w-6xl mx-auto">
+      <p class="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-brand-muted mb-2">Questions</p>
+      <h2 class="text-xl sm:text-3xl font-extrabold uppercase tracking-tight mb-8">Frequently Asked Questions</h2>
+      <p class="text-brand-muted text-sm sm:text-base">
+        Got questions about coaching? Reach out directly via email at 
+        <a href="mailto:movebetter1997@gmail.com" class="text-white underline hover:opacity-80 transition-opacity">movebetter1997@gmail.com</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-black text-white pt-16 sm:pt-20 pb-12 px-4 sm:px-6">
+    <div class="max-w-6xl mx-auto">
       
-      <div class="spec-grid">
-        <div class="spec-card">
-          <div class="spec-number">01</div>
-          <h3>Body Recomposition</h3>
-          <p>Targeted fat loss and muscle retention programs optimized for busy professionals needing sustainable systems.</p>
+      <!-- STAY UPDATED TOP HALF -->
+      <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 pb-16 sm:pb-20 border-b border-brand-border">
+        <div class="max-w-xl">
+          <h2 class="text-3xl sm:text-5xl font-black uppercase tracking-tight mb-4">
+            STAY UPDATED
+          </h2>
+          <p class="text-brand-muted text-xs sm:text-sm leading-relaxed">
+            Sign up to be the first to find out when we add new offers, programs and more. We respect your privacy and will never share your information with any third-party vendors.
+          </p>
         </div>
 
-        <div class="spec-card">
-          <div class="spec-number">02</div>
-          <h3>Strength & Conditioning</h3>
-          <p>Progressive overload principles designed to build functional power, joint stability, and daily performance.</p>
-        </div>
-
-        <div class="spec-card">
-          <div class="spec-number">03</div>
-          <h3>Lifestyle & Mobility</h3>
-          <p>Fixing posture, desk-job stiffness, and movement restrictions to ensure pain-free everyday living.</p>
-        </div>
-
-        <div class="spec-card">
-          <div class="spec-number">04</div>
-          <h3>Performance Nutrition</h3>
-          <p>Flexible macro frameworks without restrictive diets, giving you energy for high-demand work and training.</p>
-        </div>
+        <form onsubmit="event.preventDefault();" class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full lg:w-auto">
+          <input 
+            type="email" 
+            placeholder="Email Address" 
+            required
+            class="bg-white text-black text-sm px-4 py-3.5 w-full sm:w-80 focus:outline-none placeholder:text-neutral-400 font-medium"
+          />
+          <button 
+            type="submit" 
+            class="bg-neutral-300 hover:bg-white text-black font-semibold text-xs sm:text-sm px-8 py-3.5 rounded-full transition-colors active:scale-95 duration-150 whitespace-nowrap"
+          >
+            Sign Up
+          </button>
+        </form>
       </div>
-    </div>
-  </section>
 
-  <!-- Programs Section (Empty Placeholder) -->
-  <section id="programs">
-    <div class="container">
-      <div class="section-title">Coaching</div>
-      <h2 class="section-heading">Programs</h2>
-      <div class="empty-programs-box">
-        <p>Programs & Coaching Packages Coming Soon.</p>
+      <!-- BOTTOM HALF: SUPPORT, CONTACT, BRAND -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 pt-16 items-start">
+        
+        <!-- SUPPORT COLUMN -->
+        <div>
+          <h3 class="text-2xl sm:text-4xl font-black uppercase tracking-tight mb-6">
+            SUPPORT
+          </h3>
+          <ul class="space-y-3 text-xs sm:text-sm text-white">
+            <li><a href="#" class="underline hover:text-brand-muted transition-colors">Terms and Conditions</a></li>
+            <li><a href="#" class="underline hover:text-brand-muted transition-colors">Private Policy</a></li>
+            <li><a href="#faq" class="underline hover:text-brand-muted transition-colors">FAQs</a></li>
+          </ul>
+        </div>
+
+        <!-- CONTACT COLUMN -->
+        <div>
+          <h3 class="text-2xl sm:text-4xl font-black uppercase tracking-tight mb-6">
+            CONTACT
+          </h3>
+          <p class="text-xs sm:text-sm text-white font-medium">
+            <a href="mailto:movebetter1997@gmail.com" class="hover:underline">movebetter1997@gmail.com</a>
+          </p>
+        </div>
+
+        <!-- MOVE BETTER BRAND COLUMN -->
+        <div class="sm:col-span-2 md:col-span-1 md:text-right">
+          <h2 class="text-4xl sm:text-6xl md:text-5xl lg:text-6xl font-black uppercase tracking-tighter leading-none">
+            MOVE<br>BETTER
+          </h2>
+        </div>
+
       </div>
-    </div>
-  </section>
 
-  <!-- FAQ Section -->
-  <section id="faq">
-    <div class="container">
-      <div class="section-title">Questions</div>
-      <h2 class="section-heading">Frequently Asked Questions</h2>
-      <p style="color: var(--text-muted);">Got questions about coaching? Reach out directly via email at movebetter1997@gmail.com.</p>
-    </div>
-  </section>
+      <!-- COPYRIGHT SUB-FOOTER -->
+      <div class="mt-16 pt-8 border-t border-brand-border/40 text-center md:text-left text-[11px] uppercase tracking-widest text-brand-muted">
+        &copy; Move Better Coaching. All rights reserved.
+      </div>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; Move Better Coaching. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- MOBILE MENU INTERACTION SCRIPT -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  </script>
 
 </body>
 </html>
