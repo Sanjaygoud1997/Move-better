@@ -200,6 +200,45 @@
       text-transform: uppercase;
     }
 
+    /* --- Specializations Grid --- */
+    .spec-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .spec-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      padding: 32px;
+      transition: border-color 0.2s;
+    }
+
+    .spec-card:hover {
+      border-color: #444444;
+    }
+
+    .spec-number {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .spec-card h3 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .spec-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
     /* --- Empty Programs Section --- */
     .empty-programs-box {
       border: 1px dashed var(--border-color);
@@ -275,7 +314,32 @@
     <div class="container">
       <div class="section-title">Focus Areas</div>
       <h2 class="section-heading">Specializations</h2>
-      <p style="color: var(--text-muted);">Lifestyle coaching, strength conditioning, and functional movement.</p>
+      
+      <div class="spec-grid">
+        <div class="spec-card">
+          <div class="spec-number">01</div>
+          <h3>Body Recomposition</h3>
+          <p>Targeted fat loss and muscle retention programs optimized for busy professionals needing sustainable systems.</p>
+        </div>
+
+        <div class="spec-card">
+          <div class="spec-number">02</div>
+          <h3>Strength & Conditioning</h3>
+          <p>Progressive overload principles designed to build functional power, joint stability, and daily performance.</p>
+        </div>
+
+        <div class="spec-card">
+          <div class="spec-number">03</div>
+          <h3>Lifestyle & Mobility</h3>
+          <p>Fixing posture, desk-job stiffness, and movement restrictions to ensure pain-free everyday living.</p>
+        </div>
+
+        <div class="spec-card">
+          <div class="spec-number">04</div>
+          <h3>Performance Nutrition</h3>
+          <p>Flexible macro frameworks without restrictive diets, giving you energy for high-demand work and training.</p>
+        </div>
+      </div>
     </div>
   </section>
 
